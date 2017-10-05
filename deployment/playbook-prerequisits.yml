@@ -1,0 +1,10 @@
+---
+- name: "install prerequisits"
+  hosts: all
+  become: yes
+  become_method: sudo
+
+  roles:
+    - role: check_preconditions
+    - role: install_ansible
+    - role: install_java

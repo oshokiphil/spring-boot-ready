@@ -1,0 +1,11 @@
+[Unit]
+Description=spring-boot-ready application
+
+[Service]
+ExecStart=/usr/bin/java -jar /opt/application/application.jar
+StandardOutput=journal
+User=application
+Group=application
+
+[Install]
+WantedBy=multi-user.target

@@ -12,6 +12,7 @@
     <modules>
         <module>adminserver</module>
         <module>application</module>
+        <module>deployment</module>
     </modules>
 
 </project>

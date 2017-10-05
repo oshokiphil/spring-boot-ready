@@ -6,7 +6,7 @@
 
     <groupId>io.github.christian-draeger</groupId>
     <artifactId>application</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0-SNAPSHOT</version>
 
     <description>
         An example - ready to code - spring boot app.
