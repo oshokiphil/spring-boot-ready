@@ -11,5 +11,5 @@
   roles:
     - role: geerlingguy.java
     - role: install_application
+    - role: install_netdata
     - role: install_adminserver
-
