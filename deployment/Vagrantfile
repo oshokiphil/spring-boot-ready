@@ -7,7 +7,7 @@
 # you're doing.
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "debian/contrib-stretch64"
+  config.vm.box = "debian/contrib-jessie64"
 
   config.vm.define :springbootready do |vagrantbox|
 
@@ -23,18 +23,8 @@ Vagrant.configure("2") do |config|
     vagrantbox.vm.network "forwarded_port", guest: 8080, host: 8080
     vagrantbox.vm.network "forwarded_port", guest: 8090, host: 8090
 
-    #vagrantbox.vm.provision "ansible" do |ansible|
-    #  ansible.playbook = "playbook-prerequisits.yml"
-    #  ansible.verbose = "-vv"
-    #end
-
     vagrantbox.vm.provision "ansible" do |ansible|
-      ansible.playbook = "playbook-adminserver.yml"
-      ansible.verbose = "-vv"
-    end
-
-    vagrantbox.vm.provision "ansible" do |ansible|
-      ansible.playbook = "playbook-application.yml"
+      ansible.playbook = "playbook-vagrant.yml"
       ansible.verbose = "-vv"
     end
 

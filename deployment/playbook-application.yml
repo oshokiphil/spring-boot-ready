@@ -1,11 +1,21 @@
 ---
-- name: "install application"
+- name: "deploy everything"
   hosts: all
   become: yes
   become_method: sudo
 
   vars:
-    - adminserver_jar: '../application/target/application-0-SNAPSHOT.jar'
+    - adminserver_jar: '../adminserver/target/adminserver-0-SNAPSHOT.jar'
+    - application_jar: '../application/target/application-0-SNAPSHOT.jar'
+
+  #roles:
+    #- role: check_preconditions
+    #- role: install_ansible
+    #- role: install_java
+    #- role: install_application
 
   roles:
+    - role: install_ansible
+    - role: geerlingguy.java
     - role: install_application
+

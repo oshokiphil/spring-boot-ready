@@ -1,13 +1,15 @@
 ---
-- name: "install adminserver"
+- name: "deploy everything to vagrant box"
   hosts: all
   become: yes
   become_method: sudo
 
   vars:
     - adminserver_jar: '../adminserver/target/adminserver-0-SNAPSHOT.jar'
+    - application_jar: '../application/target/application-0-SNAPSHOT.jar'
 
   roles:
-    - role: install_ansible
     - role: geerlingguy.java
+    - role: install_application
     - role: install_adminserver
+
