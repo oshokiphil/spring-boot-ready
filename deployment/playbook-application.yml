@@ -19,4 +19,3 @@
     - role: geerlingguy.java
     - role: install_netdata
     - role: install_application
-

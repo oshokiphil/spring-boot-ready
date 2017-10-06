@@ -12,9 +12,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import io.restassured.RestAssured;
+import springboot.ready.Application;
 
-@SpringBootTest(webEnvironment = RANDOM_PORT)
 @RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = RANDOM_PORT, classes = { Application.class })
 public class ApiControllerIT {
 
     @Value("${local.server.port}")
@@ -43,5 +44,15 @@ public class ApiControllerIT {
                 .statusCode(200)
                 .body("firstname",equalTo("carl"))
                 .body("name",equalTo("smith"));
+    }
+
+    @Test
+    public void canCallApiWithParameterAndDefault() throws Exception {
+        given().when()
+                .get("/api?firstname=carl")
+                .then()
+                .statusCode(200)
+                .body("firstname",equalTo("carl"))
+                .body("name",equalTo("doe"));
     }
 }
