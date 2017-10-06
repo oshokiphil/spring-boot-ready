@@ -4,6 +4,7 @@ Spring Example Project
 Prerequisites
 ----
 * jdk installed
+* vagrant installed
 * docker installed
 
 About
@@ -18,5 +19,19 @@ Things that are configured already:
 	* really nice UI on top of Actuator to monitor spring boot applications. for instance can set different log 
 	levels at runtime, see health status of dependencies (e.g. database, hystrix, messaging queues), metrics, etc.
 * [SwaggerUI](https://swagger.io/swagger-ui/)
-	* adds a nice generated documentation of your api endpoints, with "try out" functionality to make actual requests 
+	* adds a generated living documentation of your api endpoints that will be always up-to-date, 
+	with "try out" functionality to make actual requests 
+* deployment via [Ansible](https://www.ansible.com/)
+	* deploys the application into a vagrant box for testing behaviour - ready to only adjust hosts and ssh config to 
+	have a server ready deployment. including serverside installation of:
+		* jdk
+		* [netdata](https://github.com/firehol/netdata/blob/master/README.md)
+			* netdata is a system for distributed real-time performance and health monitoring. 
+			It provides unparalleled insights, in real-time, of everything happening on the system 
+			it runs (including applications such as web and database servers), 
+			using modern interactive web dashboards.
+* shell script for dependency update checks
+	* check for maven property updates
+	* check for maven plugin updates
+	* check for maven dependency updates
 
