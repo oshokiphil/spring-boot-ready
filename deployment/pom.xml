@@ -46,7 +46,7 @@
                         </goals>
 
                         <configuration>
-                            <playbook>${basedir}/playbook-prerequisits.yml</playbook>
+                            <playbook>${basedir}/playbook-vagrant.yml</playbook>
                         </configuration>
                     </execution>
 
