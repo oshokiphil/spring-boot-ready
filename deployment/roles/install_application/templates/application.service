@@ -2,10 +2,10 @@
 Description=spring-boot-ready application
 
 [Service]
-ExecStart=/usr/bin/java -jar /opt/application/application.jar
+ExecStart=/usr/bin/java -jar /opt/{{ application_name }}/{{ application_name }}.jar
 StandardOutput=journal
-User=application
-Group=application
+User={{ application_name }}
+Group={{ application_name }}
 
 [Install]
 WantedBy=multi-user.target
