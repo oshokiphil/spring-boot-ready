@@ -2,7 +2,7 @@ Deployment
 ====
 
 ## prerequisits
-	$ ansible-galaxy install geerlingguy.java
+	$ ansible-galaxy install -r requirements.yml
 
 ## Run Ansible Playbook against Vagrant box
 
