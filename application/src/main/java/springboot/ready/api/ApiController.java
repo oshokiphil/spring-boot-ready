@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 public class ApiController {
 
@@ -28,6 +30,8 @@ public class ApiController {
             put("firstname", firstame);
             put("name", name);
         }};
+
+        log.info("this is just a test");
 
         return person;
     }
