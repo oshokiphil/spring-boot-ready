@@ -15,7 +15,7 @@ import io.restassured.RestAssured;
 import springboot.ready.Application;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = RANDOM_PORT, classes = { Application.class })
+@SpringBootTest(webEnvironment = RANDOM_PORT, classes = Application.class)
 public class ApiControllerIT {
 
     @Value("${local.server.port}")
