@@ -17,9 +17,9 @@
         </encoder>
     </appender>
 
-    <logger name="springboot.ready.api.ApiController" level="INFO" />
+    <logger name="springboot.ready.api.ApiController" level="DEBUG" />
 
-    <root level="WARN">
+    <root level="INFO">
         <appender-ref ref="CONSOLE"/>
     </root>
 </configuration>

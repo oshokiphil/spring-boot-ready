@@ -31,7 +31,7 @@ public class ApiController {
             put("name", name);
         }};
 
-        log.info("this is just a test");
+        log.debug("this is just a test");
 
         return person;
     }
