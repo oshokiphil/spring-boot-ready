@@ -34,4 +34,19 @@ Things that are configured already:
 	* check for maven property updates
 	* check for maven plugin updates
 	* check for maven dependency updates
+	
+How
+----
+
+#### Application
+
+To start the application locally run:
+
+	mvn spring-boot:run
+	 
+To build a docker image from the application run:
+
+	 mvn clean package docker:build
+	 
+
 
