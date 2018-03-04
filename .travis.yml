@@ -2,6 +2,11 @@ language: java
 jdk:
   - oraclejdk8
 
-install:
-  - pip install ansible
+sudo: required
+
+services:
+  - docker
+
+#install:
+#  - pip install ansible
 
