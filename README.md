@@ -1,4 +1,4 @@
-Spring Example Project
+Spring Example Project [![Build Status](https://travis-ci.org/christian-draeger/spring-boot-ready.svg?branch=master)](https://travis-ci.org/christian-draeger/spring-boot-ready)
 ====
 
 Prerequisites
