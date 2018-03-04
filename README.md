@@ -35,6 +35,8 @@ Things that are configured already:
 	* check for maven property updates
 	* check for maven plugin updates
 	* check for maven dependency updates
+* test report visiualisation with [Allure](https://docs.qameta.io/allure/)
+	* Allure Framework is a flexible lightweight multi-language test report tool that not only shows a very concise 	representation of what have been tested in a neat web report form, but allows everyone participating in the development 	process to extract maximum of useful information from everyday execution of tests.
 	
 How
 ----
