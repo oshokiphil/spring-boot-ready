@@ -6,6 +6,7 @@ Prerequisites
 * jdk installed
 * vagrant installed
 * docker installed
+* ansible installed
 
 About
 ----
